@@ -124,7 +124,7 @@ function App() {
 
             {/* Footer with Easter Egg */}
             <footer className="py-8 text-center text-pink-400 text-sm flex flex-col items-center justify-center bg-white/30 backdrop-blur-sm">
-              <p>Made with lots of love</p>
+              <p>Made specially for you</p>
               <button 
                 onClick={handleEasterEggClick}
                 className="mt-2 text-pink-500 hover:scale-125 transition-transform p-2 cursor-pointer"
