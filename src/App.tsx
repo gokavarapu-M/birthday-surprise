@@ -25,7 +25,8 @@ function App() {
 
   useEffect(() => {
     // Initialize audio
-    audioRef.current = new Audio('/birthday-surprise/music/birthday.mp3');
+    const musicPath = import.meta.env.BASE_URL + 'music/birthday.mp3';
+    audioRef.current = new Audio(musicPath);
     audioRef.current.loop = true;
     
     return () => {

@@ -46,7 +46,7 @@ export default function GallerySection() {
             >
               <div className="w-full h-full bg-gray-200 overflow-hidden relative">
                 <img 
-                  src={item.src} 
+                  src={item.src.startsWith('/') ? `${import.meta.env.BASE_URL}${item.src.slice(1)}` : item.src} 
                   alt={item.caption}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
@@ -92,7 +92,7 @@ export default function GallerySection() {
               
               <div className="w-full max-h-[70vh] bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
                 <img 
-                  src={selectedImg.src} 
+                  src={selectedImg.src.startsWith('/') ? `${import.meta.env.BASE_URL}${selectedImg.src.slice(1)}` : selectedImg.src} 
                   alt={selectedImg.caption}
                   className="max-w-full max-h-[70vh] object-contain"
                   onError={(e) => {
